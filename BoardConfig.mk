@@ -24,13 +24,13 @@ LOCAL_PATH:= $(call my-dir)
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := false
 
-BOARD_HAS_FLIPPED_SCREEN := true
+BOARD_HAS_FLIPPED_SCREEN := false
 
 TARGET_NO_BOOTLOADER := true
 
 TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/blade/recovery_kernel
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=blade console=null
+BOARD_KERNEL_CMDLINE := androidboot.hardware=joe console=null
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_ARCH_VARIANT := armv6-vfp
@@ -39,7 +39,7 @@ TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
 
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-TARGET_BOOTLOADER_BOARD_NAME := blade
+TARGET_BOOTLOADER_BOARD_NAME := joe
 
 BOARD_HAVE_BLUETOOTH := true
 
@@ -77,13 +77,13 @@ BOARD_USES_GPSSHIM := true
 BOARD_GPS_NEEDS_XTRA := true
 
 
-BOARD_KERNEL_BASE := 0x02600000
+BOARD_KERNEL_BASE := 0x02A00000
 #BOARD_PAGE_SIZE := 0x00000800
 
 TARGET_PROVIDES_LIBRIL := true
 TARGET_PROVIDES_LIBAUDIO := true
 
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/zte/blade/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/zte/joe/UsbController.cpp
 
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
@@ -105,5 +105,5 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x0cf80000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0d020000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/zte/blade/recovery/recovery_ui.c
-TARGET_RECOVERY_INITRC := device/zte/blade/recovery/recovery.rc
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/zte/joe/recovery/recovery_ui.c
+TARGET_RECOVERY_INITRC := device/zte/joe/recovery/recovery.rc

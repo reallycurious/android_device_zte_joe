@@ -25,12 +25,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/zte/blade/overlay
+DEVICE_PACKAGE_OVERLAYS := device/zte/joe/overlay
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := zte_blade
-PRODUCT_DEVICE := blade
-PRODUCT_MODEL := ZTE Blade
+PRODUCT_NAME := zte_joe
+PRODUCT_DEVICE := joe
+PRODUCT_MODEL := ZTE Joe
 
 PRODUCT_PACKAGES += \
     LiveWallpapers \
@@ -43,11 +43,11 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Development \
     Term \
-    gralloc.blade \
-    copybit.blade \
-    gps.blade \
-    lights.blade \
-    sensors.blade \
+    gralloc.joe \
+    copybit.joe \
+    gps.joe \
+    lights.joe \
+    sensors.joe \
     libOmxCore \
     libOmxVidEnc \
     FM \
@@ -57,34 +57,34 @@ PRODUCT_PACKAGES += \
     dexpreopt
 
 # proprietary side of the device
-$(call inherit-product-if-exists, vendor/zte/blade/blade-vendor.mk)
+$(call inherit-product-if-exists, vendor/zte/joe/joe-vendor.mk)
 
 DISABLE_DEXPREOPT := false
 
 PRODUCT_COPY_FILES += \
-    device/zte/blade/qwerty.kl:system/usr/keylayout/qwerty.kl
+    device/zte/joe/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 # fstab
 PRODUCT_COPY_FILES += \
-    device/zte/blade/vold.fstab:system/etc/vold.fstab
+    device/zte/joe/vold.fstab:system/etc/vold.fstab
 
 # Init
 PRODUCT_COPY_FILES += \
-    device/zte/blade/init.blade.rc:root/init.blade.rc \
-    device/zte/blade/ueventd.blade.rc:root/ueventd.blade.rc
+    device/zte/joe/init.joe.rc:root/init.joe.rc \
+    device/zte/joe/ueventd.joe.rc:root/ueventd.joe.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/zte/blade/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/zte/blade/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+    device/zte/joe/AudioFilter.csv:system/etc/AudioFilter.csv \
+    device/zte/joe/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
 
 # WLAN + BT
 PRODUCT_COPY_FILES += \
-    device/zte/blade/init.bt.sh:system/etc/init.bt.sh \
-    device/zte/blade/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/zte/blade/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/zte/blade/prebuilt/hostapd:system/bin/hostapd \
-    device/zte/blade/prebuilt/hostapd.conf:system/etc/wifi/hostapd.conf
+    device/zte/joe/init.bt.sh:system/etc/init.bt.sh \
+    device/zte/joe/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/zte/joe/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/zte/joe/prebuilt/hostapd:system/bin/hostapd \
+    device/zte/joe/prebuilt/hostapd.conf:system/etc/wifi/hostapd.conf
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -99,25 +99,25 @@ PRODUCT_COPY_FILES += \
 
 #Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/zte/blade/prebuilt/ar6000.ko:system/wifi/ar6000.ko \
-    device/zte/blade/prebuilt/cifs.ko:system/lib/modules/2.6.35.7-perf+/cifs.ko \
-    device/zte/blade/prebuilt/zram.ko:system/lib/modules/2.6.35.7-perf+/zram.ko \
-    device/zte/blade/prebuilt/lzo_compress.ko:system/lib/modules/2.6.35.7-perf+/lzo_compress.ko \
-    device/zte/blade/prebuilt/lzo_decompress.ko:system/lib/modules/2.6.35.7-perf+/lzo_decompress.ko
+    device/zte/joe/prebuilt/ar6000.ko:system/wifi/ar6000.ko \
+    device/zte/joe/prebuilt/cifs.ko:system/lib/modules/2.6.35.7-perf+/cifs.ko \
+    device/zte/joe/prebuilt/zram.ko:system/lib/modules/2.6.35.7-perf+/zram.ko \
+    device/zte/joe/prebuilt/lzo_compress.ko:system/lib/modules/2.6.35.7-perf+/lzo_compress.ko \
+    device/zte/joe/prebuilt/lzo_decompress.ko:system/lib/modules/2.6.35.7-perf+/lzo_decompress.ko
 
 #WiFi firmware
 PRODUCT_COPY_FILES += \
-    device/zte/blade/firmware/regcode:system/wifi/regcode \
-    device/zte/blade/firmware/data.patch.hw2_0.bin:system/wifi/data.patch.hw2_0.bin \
-    device/zte/blade/firmware/athwlan.bin.z77:system/wifi/athwlan.bin.z77 \
-    device/zte/blade/firmware/athtcmd_ram.bin:system/wifi/athtcmd_ram.bin \
-    device/zte/blade/firmware/device.bin:system/wifi/device.bin \
-    device/zte/blade/firmware/eeprom.bin:system/wifi/eeprom.bin \
-    device/zte/blade/firmware/eeprom.data:system/wifi/eeprom.data
+    device/zte/joe/firmware/regcode:system/wifi/regcode \
+    device/zte/joe/firmware/data.patch.hw2_0.bin:system/wifi/data.patch.hw2_0.bin \
+    device/zte/joe/firmware/athwlan.bin.z77:system/wifi/athwlan.bin.z77 \
+    device/zte/joe/firmware/athtcmd_ram.bin:system/wifi/athtcmd_ram.bin \
+    device/zte/joe/firmware/device.bin:system/wifi/device.bin \
+    device/zte/joe/firmware/eeprom.bin:system/wifi/eeprom.bin \
+    device/zte/joe/firmware/eeprom.data:system/wifi/eeprom.data
 
 #Media profile
 PRODUCT_COPY_FILES += \
-    device/zte/blade/media_profiles.xml:system/etc/media_profiles.xml
+    device/zte/joe/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
@@ -134,25 +134,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240 \
-    ro.sf.hwrotation=180
+    ro.sf.lcd_density=120 \
+    ro.sf.hwrotation=0
 
-# Blade uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
+# Joe uses medium-density artwork where available
+PRODUCT_LOCALES += mdpi
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # This should not be needed but on-screen keyboard uses the wrong density without it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    qemu.sf.lcd_density=240 
+    qemu.sf.lcd_density=120 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.com.android.dateformat=dd-MM-yyyy \
     ro.ril.hsxpa=2 \
     ro.ril.gprsclass=10 \
-    ro.build.baseband_version=P729BB01 \
+    ro.build.baseband_version=P727AB01 \
     ro.telephony.default_network=0 \
     ro.telephony.call_ring.multiple=false
 
