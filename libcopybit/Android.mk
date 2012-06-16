@@ -17,7 +17,7 @@ LOCAL_PATH:= $(call my-dir)
 # HAL module implemenation, not prelinked and stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),joe)
     include $(CLEAR_VARS)
     ifeq ($(TARGET_GRALLOC_USES_ASHMEM),true)
          LOCAL_CFLAGS += -DUSE_ASHMEM
@@ -30,7 +30,7 @@ ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
     LOCAL_SHARED_LIBRARIES := liblog
     LOCAL_SRC_FILES := copybit.cpp
     LOCAL_MODULE := copybit.blade
-    LOCAL_C_INCLUDES += device/zte/blade/libgralloc
+    LOCAL_C_INCLUDES += device/zte/joe/libgralloc
     LOCAL_CFLAGS += -DCOPYBIT_MSM7K=1
     include $(BUILD_SHARED_LIBRARY)
 endif
