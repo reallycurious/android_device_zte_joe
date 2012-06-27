@@ -137,8 +137,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=120 \
     ro.sf.hwrotation=0
 
-# Joe uses medium-density artwork where available
-PRODUCT_LOCALES += mdpi
+# Joe uses low-density artwork where available
+PRODUCT_LOCALES += ldpi
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

@@ -28,7 +28,7 @@ BOARD_HAS_FLIPPED_SCREEN := false
 
 TARGET_NO_BOOTLOADER := true
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/blade/recovery_kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/joe/recovery_kernel
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=joe console=null
 
